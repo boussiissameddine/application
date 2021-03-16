@@ -1,4 +1,4 @@
-package model;
+package com.cobanogluhasan.springboot.model;
 
 import javax.persistence.*;
 
@@ -17,17 +17,17 @@ public class User {
             generator = "user_sequence"
     )
     private long id;
-    private int tckn;
+    private long tckn;
     private String email;
     private String password;
-    private int gsm;
+    private long gsm;
     private String address;
 
     public User() {
 
     }
 
-    public User(int tckn, String email, String password, int gsm, String address) {
+    public User(long tckn, String email, String password, long gsm, String address) {
         this.tckn = tckn;
         this.email = email;
         this.password = password;
@@ -43,11 +43,11 @@ public class User {
         this.id = id;
     }
 
-    public int getTckn() {
+    public long getTckn() {
         return tckn;
     }
 
-    public void setTckn(int tckn) {
+    public void setTckn(long tckn) {
         this.tckn = tckn;
     }
 
@@ -67,11 +67,11 @@ public class User {
         this.password = password;
     }
 
-    public int getGsm() {
+    public long getGsm() {
         return gsm;
     }
 
-    public void setGsm(int gsm) {
+    public void setGsm(long gsm) {
         this.gsm = gsm;
     }
 

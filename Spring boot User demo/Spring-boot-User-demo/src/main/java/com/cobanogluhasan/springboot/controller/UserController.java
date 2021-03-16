@@ -1,15 +1,16 @@
 package com.cobanogluhasan.springboot.controller;
 
 import com.cobanogluhasan.springboot.exception.ResourceNotFoundException;
+import com.cobanogluhasan.springboot.model.User;
 import com.cobanogluhasan.springboot.repository.UserRepository;
-import model.User;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping( "/api/v1/")
-public class UserController {
+public class UserController  {
     private UserRepository userRepository;
 
     public UserController(UserRepository userRepository) {
@@ -51,5 +52,14 @@ public class UserController {
     }
 
     //delete user by id
+    @DeleteMapping("/users/{userId}")
+    public ResponseEntity<User> deleteUser(@PathVariable Long userId) {
+        //get existing user from database
+        User existingUser = this.userRepository.findById(userId).orElseThrow(()->
+                new ResourceNotFoundException("User not found with id: " + userId));
+
+        this.userRepository.delete(existingUser);
+        return ResponseEntity.ok().build();
+    }
 
 }
