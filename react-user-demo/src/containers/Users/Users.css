@@ -1,0 +1,10 @@
+.Users {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
