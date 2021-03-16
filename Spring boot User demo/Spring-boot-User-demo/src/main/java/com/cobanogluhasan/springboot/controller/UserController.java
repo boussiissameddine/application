@@ -1,5 +1,6 @@
 package com.cobanogluhasan.springboot.controller;
 
+
 import com.cobanogluhasan.springboot.exception.ResourceNotFoundException;
 import com.cobanogluhasan.springboot.model.User;
 import com.cobanogluhasan.springboot.repository.UserRepository;
@@ -26,7 +27,7 @@ public class UserController  {
     //get user by id
     @GetMapping("/users/{userId}")
     public User getUserById(@PathVariable Long userId) {
-        return this.userRepository.findById(userId).orElseThrow(()->
+        return this.userRepository.findById(userId).orElseThrow(() ->
                 new ResourceNotFoundException("User not found with id: " + userId));
     }
 
