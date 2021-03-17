@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, {Component} from 'react';
+import EditUser from '../../components/EditUser/EditUser';
 import NewUser from '../../components/NewUser/NewUser';
 import UserInformation from '../../components/UserInformation/UserInformation';
 import './User.css';
@@ -7,7 +8,8 @@ import './User.css';
 class User extends Component {
     state = {
         userInformations: [],
-        editable: false
+        editable: false,
+        userId: null,
     }
 
     componentDidMount() {
@@ -18,8 +20,7 @@ class User extends Component {
     }
 
     editClickedHandler = (id) => {
-        console.log(id, 'want to edit!');
-        this.setState({editable: true});
+        this.setState({editable: true, userId:id});
     }
 
     deleteClickedHandler = (id) => {
@@ -27,12 +28,10 @@ class User extends Component {
     }
 
     addNewUserClickHandler = () => {
-        console.log("add new User Clicked!");
+        //post request and post data
+     
     }
 
-    saveEditedUserClickHandler = () => {
-        console.log("save edited User Clicked!");
-    }
 
     render() {
         const users = this.state.userInformations.map(user => {
@@ -49,10 +48,9 @@ class User extends Component {
 
         return (
             <div>
-                <NewUser
-                    text="Add New User"
-                    buttonText="Add"
-                    clicked={this.addNewUserClickHandler}/>
+                <NewUser 
+                text="add New User"
+                buttonText="Add" />
             <div className="User">
                 <table>
                     <tr className="header">
@@ -66,11 +64,10 @@ class User extends Component {
                         {users}
                 </table>
             </div>
-           {this.state.editable ? <NewUser 
+           {this.state.editable ? <EditUser 
                     text="Edit Selected User"
-                    tcId="11111"
                     buttonText="Save"
-                    clicked={this.saveEditedUserClickHandler} /> : null}
+                    userId = {this.state.userId} /> : null}
             </div>
         );
     }
