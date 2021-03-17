@@ -4,17 +4,18 @@ import './NewUser.css';
 const NewUser = () => {
     return (
         <div className="NewUser">
-            <form>
-                <label>TC ID:
+            <h5>Add New User</h5>
+            <form className="Form">
+                <label>TC ID
                     <input type="number" minlength="11" name="tcId" pattern="[0-9]{11}" required placeholder="11111111111"/></label>
-                <label>Email:
+                <label>Email
                     <input type="email" name="email" required placeholder="email"/></label>
-                <label>Phone Number:
+                <label>Phone Number
                     <input type="tel" name="phone" required placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/></label>
-                <label>Password:
+                <label>Password
                     <input type="password" name="password" minlength="8" required placeholder="create password" 
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain one number and one uppercase and lowercase letter, and at least 8characters"/></label>
-                    <input type="submit" value="Save" />
+                    <input className="SaveButton" type="submit" value="Save" />
             </form>
         </div>
     );

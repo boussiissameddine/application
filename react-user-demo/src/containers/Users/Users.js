@@ -7,7 +7,7 @@ class Users extends Component {
     render() {
         return (
             <div>
-                <section>
+                <section className="Users">
                     <NewUser />
                 </section>
                 <section className="Users">

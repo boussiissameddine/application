@@ -1,0 +1,65 @@
+h5 {
+    bottom: 0;
+    text-align: center;
+}
+
+.NewUser {
+   margin-top: 4.5rem;
+   font-size: 1.25rem;
+   background-color: #16a085;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.Form {
+        font-family: arial, sans-serif;
+        width: 100%;
+        border: 1px solid #bbddcc;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+        padding-bottom: 0.5rem;
+}
+
+label {
+    height: 1.5rem;
+    margin: 10px;
+    text-align: center;
+}
+
+input {
+    height: 1.5rem;
+    margin-left: .5rem;
+    padding: 12px 25px;
+    margin: 8px 3px;
+    box-sizing: border-box;
+    align-self: center;
+    text-align: center;
+    font-size: .9rem;
+}
+
+input:active,
+input:hover, 
+input:focus,
+input:selected {
+    user-select: none;
+    filter: brightness(90%);
+    border: 1px solid #16a085;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.SaveButton {
+    background: rgba(117, 199, 131, 0.5);
+    color: #fff;
+    margin-top: 1rem;
+    padding: 0px 20px; 
+    font-size: 1.2rem;
+    height: 3.2vh;
+    align-self: flex-end;
+}
