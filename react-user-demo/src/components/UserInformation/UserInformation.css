@@ -21,6 +21,7 @@ td, th {
     margin-top: 1.55rem;
     margin-right: 0.2rem;
     text-align: center;
+    outline: none;
 }
 
 .buttonStyle:hover {
@@ -28,4 +29,21 @@ td, th {
     transform: translateY(1.5%);
 }
 
+
+@media(max-width: 700px) {
+    .buttonStyle {
+        display: block;
+        margin-top: 0.2rem;
+        width: 10vw;
+        height: 3vh;
+        margin-right: 0;
+        border-radius: 5px;
+        font-size: 0.6rem;
+    }
+
+    td, th {
+      padding: 5px 10px;
+    }
+   }
+  
 

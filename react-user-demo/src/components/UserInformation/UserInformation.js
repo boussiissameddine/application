@@ -1,16 +1,18 @@
 import React from 'react';
 import './UserInformation.css';
 
-const UserInformation = () => {
+const UserInformation = (props) => {
     return (
+        <tbody>
         <tr className="UserInformation">
-                <td>111111111</td>
-                <td>test@test.com</td>
-                <td>5055050550</td>
-                <td>Güzel sokak Hatay/Turkey</td>
+                <td>{props.tcId}</td>
+                <td>{props.email}</td>
+                <td>{props.phoneNumber}</td>
+                <td>{props.address}</td>
                 <button className="buttonStyle">Edit</button>
                 <button className="buttonStyle">Delete</button>
         </tr>
+        </tbody>
     );
 };
 
