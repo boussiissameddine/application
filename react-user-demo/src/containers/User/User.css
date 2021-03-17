@@ -1,6 +1,6 @@
 .User {
     font-size: 1.3rem;
-    margin-top: 10%;
+    margin-top: 5vh;
     display: flex;
     text-align: center;
 }
@@ -42,18 +42,15 @@ table {
 
 @media(max-width: 700px) {
   .User {
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.7rem;
   }
 
-  table {
-    width: 90%;
-  }
-
   td, th {
-    padding: 5px 7px;
+    padding: 2px 3px;
   }
  }
 

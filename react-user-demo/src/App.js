@@ -1,4 +1,4 @@
-import Users from './containers/Users/Users';
+import Users from './components/Users/Users';
 
 function App() {
   return (

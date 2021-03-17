@@ -15,8 +15,8 @@ const UserInformation = (props) => {
                 <td>{pass}</td>
                 <td>{props.phoneNumber}</td>
                 <td>{props.address}</td>
-                <button className="buttonStyle">Edit</button>
-                <button className="buttonStyle">Delete</button>
+                <button onClick={props.editClicked} className="buttonStyle">Edit</button>
+                <button onClick={props.deleteClicked} className="buttonStyle">Delete</button>
         </tr>
         </tbody>
     );
