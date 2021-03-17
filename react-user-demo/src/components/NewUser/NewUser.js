@@ -7,7 +7,7 @@ const NewUser = (props) => {
             <h5>{props.text}</h5>
             <form className="Form">
                 <label>TC ID
-                    <input type="number" minlength="11" name="tcId" pattern="[0-9]{11}" required placeholder="11111111111"/></label>
+                    <input type="number" minlength="11" name="tcId" pattern="[0-9]{11}" required placeholder="11111111111" value={props.tcId}/></label>
                 <label>Email
                     <input type="email" name="email" required placeholder="email"/></label>
                 <label>Phone Number
@@ -15,7 +15,7 @@ const NewUser = (props) => {
                 <label>Password
                     <input type="password" name="password" minlength="8" required placeholder="create password" 
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain one number and one uppercase and lowercase letter, and at least 8characters"/></label>
-                    <input className="SaveButton" type="submit" value="Add" />
+                    <input className="SaveButton" type="submit" value={props.buttonText} onClick={props.clicked} />
             </form>
         </div>
     );

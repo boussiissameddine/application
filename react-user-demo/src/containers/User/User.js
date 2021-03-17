@@ -7,6 +7,7 @@ import './User.css';
 class User extends Component {
     state = {
         userInformations: [],
+        editable: false
     }
 
     componentDidMount() {
@@ -25,6 +26,14 @@ class User extends Component {
         console.log(id, 'want to be deleted!');
     }
 
+    addNewUserClickHandler = () => {
+        console.log("add new User Clicked!");
+    }
+
+    saveEditedUserClickHandler = () => {
+        console.log("save edited User Clicked!");
+    }
+
     render() {
         const users = this.state.userInformations.map(user => {
             return <UserInformation
@@ -41,7 +50,9 @@ class User extends Component {
         return (
             <div>
                 <NewUser
-                    text="Add New User" />
+                    text="Add New User"
+                    buttonText="Add"
+                    clicked={this.addNewUserClickHandler}/>
             <div className="User">
                 <table>
                     <tr className="header">
@@ -55,8 +66,11 @@ class User extends Component {
                         {users}
                 </table>
             </div>
-            <NewUser 
-                    text="Edit Selected User" />
+           {this.state.editable ? <NewUser 
+                    text="Edit Selected User"
+                    tcId="11111"
+                    buttonText="Save"
+                    clicked={this.saveEditedUserClickHandler} /> : null}
             </div>
         );
     }

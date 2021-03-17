@@ -2,13 +2,14 @@
     font-size: 1.3rem;
     margin-top: 5vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
     border: 1px solid #bbddcc;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
   }
@@ -42,11 +43,9 @@ table {
 
 @media(max-width: 700px) {
   .User {
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 0.7rem;
+    width: 90%;
+    margin: auto;
   }
 
   td, th {
