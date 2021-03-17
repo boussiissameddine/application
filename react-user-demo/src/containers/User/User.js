@@ -3,8 +3,6 @@ import React, {Component} from 'react';
 import UserInformation from '../../components/UserInformation/UserInformation';
 import './User.css';
 
-//
-
 class User extends Component {
     state = {
         userInformations: []
@@ -17,12 +15,12 @@ class User extends Component {
         });
     }
 
-
     render() {
         const users = this.state.userInformations.map(user => {
             return  <UserInformation
                 key={user.id}
                 tcId = {user.tckn}
+                password={user.password}
                 phoneNumber={user.gsm}
                 email={user.email}
                 address={user.address}  />
@@ -34,6 +32,7 @@ class User extends Component {
                     <tr className="header">
                         <th>Tc Kimlik</th>
                         <th>E-mail</th>
+                        <th>Password</th>
                         <th>Phone Number</th>
                         <th>Adress</th>
                         <th>Actions</th>
