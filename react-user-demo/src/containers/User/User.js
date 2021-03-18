@@ -13,9 +13,12 @@ class User extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8080/api/v1/users')
+        axios.get('http://localhost:8080/api/v1/users/')
         .then(response => {
             this.setState({userInformations: response.data});
+        })
+        .catch(error => {
+            console.log(error)
         });
     }
 
@@ -24,14 +27,14 @@ class User extends Component {
     }
 
     deleteClickedHandler = (id) => {
-        console.log(id, 'want to be deleted!');
+            axios.delete('http://localhost:8080/api/v1/users/' + id)
+            .then(response => {
+                console.log(response);
+            })
+            .catch(error => {
+                console.log(error)
+            });
     }
-
-    addNewUserClickHandler = () => {
-        //post request and post data
-     
-    }
-
 
     render() {
         const users = this.state.userInformations.map(user => {
@@ -49,7 +52,7 @@ class User extends Component {
         return (
             <div>
                 <NewUser 
-                text="add New User"
+                text="Add New User"
                 buttonText="Add" />
             <div className="User">
                 <table>

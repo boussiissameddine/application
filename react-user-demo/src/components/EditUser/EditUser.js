@@ -27,17 +27,20 @@ class EditUser extends Component {
          }
     }
 
-    saveEditedUserHandler=() => {
+    saveEditedUserHandler=(userId) => {
         const user = {
-            tcId:this.state.tcId,
+            tckn:this.state.tcId,
             email: this.state.email,
-            phone:this.state.phone,
+            gsm:this.state.phone,
             password: this.state.password,
             address:this.state.address,
         };
-        axios.put('http://localhost:8080/api/v1/users' + this.props.userId + user)
+        axios.put('http://localhost:8080/api/v1/users/' + userId, user)
         .then(response => {
             console.log(response);
+        })
+        .catch(error => {
+            console.log(error)
         });
     };
 
@@ -63,14 +66,14 @@ class EditUser extends Component {
             <label>Phone Number
                 <input type="tel" 
                 name="phone" required 
-                placeholder="555-555-5555" 
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="5555555555" 
+                pattern="[0-9]{10}"
                 value={this.state.phone}
                 onChange={(event) => this.setState({phone: event.target.value})}/></label>
             <label>Password
                 <input type="password" 
                 name="password" 
-                minlength="8" required
+                minLength="8" required
                 value={this.state.password}
                 onChange={(event) => this.setState({password: event.target.value})}
                 placeholder="create password" 
@@ -81,7 +84,7 @@ class EditUser extends Component {
                 name="address" required
                 value={this.state.address}
                 onChange={(event) => this.setState({address: event.target.value})}/></label>
-            <input className="SaveButton" type="submit" value={this.props.buttonText} onClick={this.props.clicked} />
+            <input className="SaveButton" type="submit" value={this.props.buttonText} onClick={() => this.saveEditedUserHandler(this.props.userId)} />
         </form>
     </div>; 
         }
