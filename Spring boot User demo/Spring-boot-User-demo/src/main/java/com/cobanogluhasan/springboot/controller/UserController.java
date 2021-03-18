@@ -1,12 +1,16 @@
 package com.cobanogluhasan.springboot.controller;
 
 
+import com.cobanogluhasan.springboot.Sha256Algorithm;
 import com.cobanogluhasan.springboot.exception.ResourceNotFoundException;
 import com.cobanogluhasan.springboot.model.User;
 import com.cobanogluhasan.springboot.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 @RestController
@@ -19,7 +23,7 @@ public class UserController  {
         this.userRepository = userRepository;
     }
 
-    //get all users
+        //get all users
     @GetMapping("users")
     public List<User> getUsers() {
         return this.userRepository.findAll();
