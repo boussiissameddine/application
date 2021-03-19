@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './NewUser.css';
 import axios from 'axios';
-import jsSHA from 'jssha';
 
 class NewUser extends Component {
     state = {
@@ -12,14 +11,6 @@ class NewUser extends Component {
         address: '',
         errorMessage: ''
     };
-
-    hashmyPassword = (password) => {
-        var sha256 = new jsSHA('SHA-256', 'TEXT');
-        sha256.update(password);
-        var hash = sha256.getHash("HEX");
-        return hash;
-    };
-
 
     addNewUserHandler = () => {
         const user = {
