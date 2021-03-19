@@ -11,16 +11,7 @@ import java.security.NoSuchAlgorithmException;
 public class User {
     //generate unique id
     @Id
-    @SequenceGenerator(
-            name = "user_sequence",
-            sequenceName = "user_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "user_sequence"
-    )
-    @Autowired
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
     private long tckn;
     private String email;
