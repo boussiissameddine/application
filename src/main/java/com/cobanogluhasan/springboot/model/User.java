@@ -1,6 +1,7 @@
 package com.cobanogluhasan.springboot.model;
 
 import com.cobanogluhasan.springboot.Sha256Algorithm;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.security.NoSuchAlgorithmException;
@@ -19,6 +20,7 @@ public class User {
             strategy = GenerationType.SEQUENCE,
             generator = "user_sequence"
     )
+    @Autowired
     private long id;
     private long tckn;
     private String email;

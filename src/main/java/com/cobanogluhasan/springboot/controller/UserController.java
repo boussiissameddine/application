@@ -4,6 +4,7 @@ package com.cobanogluhasan.springboot.controller;
 import com.cobanogluhasan.springboot.exception.ResourceNotFoundException;
 import com.cobanogluhasan.springboot.model.User;
 import com.cobanogluhasan.springboot.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,11 +17,8 @@ import java.util.List;
 @CrossOrigin
 @RequestMapping( "/users")
 public class UserController  {
+    @Autowired
     private UserRepository userRepository;
-
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
         //get all users
     @GetMapping()
