@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping( "/")
+@RequestMapping( "/users")
 public class UserController  {
     private UserRepository userRepository;
 
@@ -23,26 +23,26 @@ public class UserController  {
     }
 
         //get all users
-    @GetMapping("users")
+    @GetMapping()
     public List<User> getUsers() {
         return this.userRepository.findAll();
     }
 
     //get user by id
-    @GetMapping("/users/{userId}")
+    @GetMapping("/{userId}")
     public User getUserById(@PathVariable Long userId) {
         return this.userRepository.findById(userId).orElseThrow(() ->
                 new ResourceNotFoundException("User not found with id: " + userId));
     }
 
     //create user
-    @PostMapping("users")
+    @PostMapping()
     public User createUser(@RequestBody User user) {
         return this.userRepository.save(user);
     }
 
     //update user
-    @PutMapping("/users/{userId}")
+    @PutMapping("/{userId}")
     public User updateUser(@PathVariable Long userId, @RequestBody User user) throws NoSuchAlgorithmException {
         User existingUser = this.userRepository.findById(userId).orElseThrow(()->
                 new ResourceNotFoundException("User not found with id: " + userId));
@@ -57,7 +57,7 @@ public class UserController  {
     }
 
     //delete user by id
-    @DeleteMapping("/users/{userId}")
+    @DeleteMapping("/{userId}")
     public ResponseEntity<User> deleteUser(@PathVariable Long userId) {
         //get existing user from database
         User existingUser = this.userRepository.findById(userId).orElseThrow(()->
