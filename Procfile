@@ -1,1 +1,1 @@
-web: java -jar target/Spring-boot-User-demo-0.0.1-SNAPSHOT.jar
+web: java -Dserver.port=$PORT -jar target/Spring-boot-User-demo-0.0.1-SNAPSHOT.jar
