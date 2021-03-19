@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Spring-boot-User-demo" target="1.8" />
+      <module name="Spring-boot-User-demo" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
