@@ -13,7 +13,7 @@ class User extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8080/api/v1/users/')
+        axios.get('/users/')
         .then(response => {
             this.setState({userInformations: response.data});
         })
@@ -27,7 +27,7 @@ class User extends Component {
     }
 
     deleteClickedHandler = (id) => {
-            axios.delete('http://localhost:8080/api/v1/users/' + id)
+            axios.delete('/users/' + id)
             .then(response => {
                 console.log(response);
             })

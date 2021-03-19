@@ -21,7 +21,7 @@ class NewUser extends Component {
             address:this.state.address
         };
           if((user.tckn && user.email && user.gsm && user.password && user.address) !== '') {
-               axios.post('http://localhost:8080/api/v1/users',user)
+               axios.post('/users',user)
             .then(response => {
                 console.log(response);
             })

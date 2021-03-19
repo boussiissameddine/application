@@ -14,7 +14,7 @@ class EditUser extends Component {
     componentDidMount() {
         if(this.props.userId) {
              if(!this.state.editableUser || (this.state.editableUser && this.state.editableUser.id !== this.props.userId)) { 
-                 axios.get('http://localhost:8080/api/v1/users/' + this.props.userId)
+                 axios.get('/users/' + this.props.userId)
                  .then(response => {
                      this.setState({
                         tcId: response.data.tckn,
