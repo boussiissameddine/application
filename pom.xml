@@ -73,24 +73,28 @@
 				</configuration>
 				<executions>
 					<execution>
-						<id>install node and npm</id>
+						<id>install node and yarn</id>
 						<goals>
-							<goal>install-node-and-npm</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>npm install</id>
-						<goals>
-							<goal>npm</goal>
+							<goal>install-node-and-yarn</goal>
 						</goals>
 						<configuration>
-							<arguments>install</arguments>
+							<nodeVersion>v15.5.0</nodeVersion>
+							<yarnVersion>v1.22.5</yarnVersion>
 						</configuration>
 					</execution>
 					<execution>
-						<id>npm run build</id>
+						<id>yarn</id>
 						<goals>
-							<goal>npm</goal>
+							<goal>yarn</goal>
+						</goals>
+						<configuration>
+							<arguments></arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>yarn run build</id>
+						<goals>
+							<goal>yarn</goal>
 						</goals>
 						<configuration>
 							<arguments>run build</arguments>
