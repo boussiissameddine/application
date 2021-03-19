@@ -43,7 +43,7 @@ public class UserController  {
 
     //update user
     @PutMapping("/users/{userId}")
-    public User updateUser(@PathVariable Long userId, @RequestBody User user) {
+    public User updateUser(@PathVariable Long userId, @RequestBody User user) throws NoSuchAlgorithmException {
         User existingUser = this.userRepository.findById(userId).orElseThrow(()->
                 new ResourceNotFoundException("User not found with id: " + userId));
 

@@ -1,6 +1,9 @@
 package com.cobanogluhasan.springboot.model;
 
+import com.cobanogluhasan.springboot.Sha256Algorithm;
+
 import javax.persistence.*;
+import java.security.NoSuchAlgorithmException;
 
 @Entity
 @Table(name="users")
@@ -63,8 +66,8 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String password) throws NoSuchAlgorithmException {
+        this.password = Sha256Algorithm.sha256(password);
     }
 
     public long getGsm() {

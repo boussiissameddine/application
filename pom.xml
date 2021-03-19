@@ -77,10 +77,6 @@
 						<goals>
 							<goal>install-node-and-npm</goal>
 						</goals>
-						<configuration>
-							<nodeVersion>v15.5.0</nodeVersion>
-							<npmVersion>7.6.3</npmVersion>
-						</configuration>
 					</execution>
 					<execution>
 						<id>npm install</id>
