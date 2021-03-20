@@ -18,11 +18,14 @@ import java.util.List;
 @RequestMapping( "/users")
 public class UserController  {
 
-    @Autowired
     private UserRepository userRepository;
 
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     //get all users
-    @GetMapping()
+    @GetMapping
     public List<User> getUsers() {
         return this.userRepository.findAll();
     }
@@ -35,7 +38,7 @@ public class UserController  {
     }
 
     //create user
-    @PostMapping()
+    @PostMapping
     public User createUser(@RequestBody User user) {
         return this.userRepository.save(user);
     }
