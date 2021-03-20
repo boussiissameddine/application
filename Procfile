@@ -1,1 +1,1 @@
-web: java -jar target/Spring-boot-User-demo-0.0.1-SNAPSHOT.jar
+web: java -jar -Dserver.port=$PORT target/<application_deployed_name.jar>
