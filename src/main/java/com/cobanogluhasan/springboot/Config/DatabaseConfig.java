@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 @Configuration
 public class DatabaseConfig {
     @Value("${spring.datasource.url}")
-    private String dbUrl;
+    private String dbUrl="jdbc:mysql://localhost:3306/db_user";
 
     @Bean
     public DataSource dataSource() {
