@@ -17,10 +17,14 @@ import java.util.List;
 @CrossOrigin
 @RequestMapping( "/users")
 public class UserController  {
-    @Autowired
+
     private UserRepository userRepository;
 
-        //get all users
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    //get all users
     @GetMapping()
     public List<User> getUsers() {
         return this.userRepository.findAll();
