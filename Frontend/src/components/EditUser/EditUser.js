@@ -35,19 +35,22 @@ class EditUser extends Component {
             password: this.state.password,
             address:this.state.address,
         };
-        axios.put('http://localhost:8080/api/v1/users/' + userId, user)
+        axios.put('/users/' + userId, user)
         .then(response => {
-            console.log(response);
         })
         .catch(error => {
             console.log(error)
         });
     };
 
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+
     render() {
         let post = <p className="NewUser">Loading</p>; 
         if(this.props.userId) {
-            post = <div className="NewUser">
+            post = <div className="NewUser" onSubmit={this.handleSubmit}>
         <h5>{this.props.text}</h5>
         <form className="Form">
             <label>TC ID

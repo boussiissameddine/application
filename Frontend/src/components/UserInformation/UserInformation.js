@@ -1,20 +1,17 @@
 import React from 'react';
 import './UserInformation.css';
 
-const UserInformation = (props) => {
-    return (
-        <tbody>
+const UserInformation = ({tcId, email, password, phoneNumber, address, editClicked, deleteClicked}) => (
         <tr className="UserInformation">
-                <td>{props.tcId}</td>
-                <td>{props.email}</td>
-                <td>{props.password}</td>
-                <td>{props.phoneNumber}</td>
-                <td>{props.address}</td>
-                <button onClick={props.editClicked} className="buttonStyle">Edit</button>
-                <button onClick={props.deleteClicked} className="buttonStyle">Delete</button>
+                <td>{tcId}</td>
+                <td>{email}</td>
+                <td>{password}</td>
+                <td>{phoneNumber}</td>
+                <td>{address}</td>
+                <button onClick={editClicked} className="buttonStyle">Edit</button>
+                <button onClick={deleteClicked} className="buttonStyle">Delete</button>
         </tr>
-        </tbody>
     );
-};
+
 
 export default UserInformation;
