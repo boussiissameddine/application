@@ -22,6 +22,7 @@ class User extends Component {
         });
     }
 
+
     editClickedHandler = (id) => {
         this.setState({editable: true, userId:id});
     }
@@ -29,7 +30,6 @@ class User extends Component {
     deleteClickedHandler = (id) => {
             axios.delete('/users/' + id)
             .then(response => {
-                console.log(response);
             })
             .catch(error => {
                 console.log(error)
@@ -37,17 +37,16 @@ class User extends Component {
     }
 
     render() {
-        const users = this.state.userInformations.map(user => {
-            return <UserInformation
-                key={user.id}
-                tcId = {user.tckn}
-                password={user.password}
-                phoneNumber={user.gsm}
-                email={user.email}
-                address={user.address}
-                editClicked={() => this.editClickedHandler(user.id)}
-                deleteClicked={() => this.deleteClickedHandler(user.id)} />
-        });
+        const users = this.state.userInformations.map(({id, tckn, password, gsm, email, address}) =>  <UserInformation
+                key={id}
+                tcId={tckn}
+                password={password}
+                phoneNumber={gsm}
+                email={email}
+                address={address}
+                editClicked={() => this.editClickedHandler(id)}
+                deleteClicked={() => this.deleteClickedHandler(id)} />
+        );
 
         return (
             <div>
@@ -56,6 +55,7 @@ class User extends Component {
                 buttonText="Add" />
             <div className="User">
                 <table>
+                    <thead>
                     <tr className="header">
                         <th>Tc Kimlik</th>
                         <th>E-mail</th>
@@ -64,7 +64,10 @@ class User extends Component {
                         <th>Adress</th>
                         <th>Actions</th>
                     </tr>
+                    </thead>
+                    <tbody>
                         {users}
+                    </tbody>
                 </table>
             </div>
            {this.state.editable ? <EditUser 

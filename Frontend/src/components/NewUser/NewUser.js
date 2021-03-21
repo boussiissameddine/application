@@ -23,7 +23,6 @@ class NewUser extends Component {
           if((user.tckn && user.email && user.gsm && user.password && user.address) !== '') {
                axios.post('/users',user)
             .then(response => {
-                console.log(response);
             })
             .catch(error => {
                 console.log(error)
@@ -32,19 +31,23 @@ class NewUser extends Component {
             this.setState({errorMessage: "All the Fields are required!"});
         }
         }
+        
+        handleSubmit(event) {
+            event.preventDefault();
+        }
 
     render() {
         return ( 
-            <React.Fragment>
+            <>
         <div className="NewUser">
         <h5>{this.props.text}</h5>
-        <form className="Form" action="">
+        <form className="Form" onSubmit={this.handleSubmit} action="">
             <label>TC ID
                 <input type="number" 
                 name="tcId" 
                 pattern="[0-9]{11}" 
                 required placeholder="11111111111" 
-                value={this.state.tcId}
+                value={this.state.tcId} //He
                 onChange={(event) => this.setState({tcId: event.target.value})}/></label>
             <label>Email
                 <input type="email"
@@ -77,7 +80,7 @@ class NewUser extends Component {
         </form>
     </div>
      <p>{this.state.errorMessage} </p>
-    </React.Fragment>
+    </>
         );
     }
 }

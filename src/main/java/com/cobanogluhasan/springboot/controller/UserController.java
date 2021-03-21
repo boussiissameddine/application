@@ -25,7 +25,7 @@ public class UserController  {
     }
 
     //get all users
-    @GetMapping
+    @GetMapping()
     public List<User> getUsers() {
         return this.userRepository.findAll();
     }
@@ -38,7 +38,7 @@ public class UserController  {
     }
 
     //create user
-    @PostMapping
+    @PostMapping("")
     public User createUser(@RequestBody User user) {
         return this.userRepository.save(user);
     }
