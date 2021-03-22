@@ -1,6 +1,6 @@
-# Spring Boot, MySQL, JPA, React Rest API Tutorial
+# Spring Boot, MySQL, JPA, React Rest API
 
-Restful CRUD API for a simple user management application using Spring Boot, Mysql, JPA and Hibernate and React.
+Restful CRUD API for a simple user management application using Spring Boot, Mysql, JPA and React.
 
 ## Requirements
 
