@@ -53,7 +53,7 @@ class EditUser extends Component {
             post = <div className="NewUser" onSubmit={this.handleSubmit}>
         <h5>{this.props.text}</h5>
         <form className="Form">
-            <label>TC ID
+            <label>ID-NUM
                 <input type="number" 
                 name="tcId" 
                 pattern="[0-9]{11}" 
@@ -66,14 +66,14 @@ class EditUser extends Component {
                  placeholder="email" 
                  value={this.state.email}
                  onChange={(event) => this.setState({email: event.target.value})}/></label>
-            <label>Phone Number
+            <label>Telephone
                 <input type="tel" 
                 name="phone" required 
-                placeholder="5555555555" 
+                placeholder="num" 
                 pattern="[0-9]{10}"
                 value={this.state.phone}
                 onChange={(event) => this.setState({phone: event.target.value})}/></label>
-            <label>Password
+            <label>Mot de passe
                 <input type="password" 
                 name="password" 
                 minLength="8" required
@@ -82,7 +82,7 @@ class EditUser extends Component {
                 placeholder="create password" 
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                 title="Must contain one number and one uppercase and lowercase letter, and at least 8characters"/></label>
-            <label>Adress
+            <label>Adresse
                 <input type="text" 
                 name="address" required
                 value={this.state.address}

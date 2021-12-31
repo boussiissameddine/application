@@ -51,18 +51,18 @@ class User extends Component {
         return (
             <div>
                 <NewUser 
-                text="Add New User"
-                buttonText="Add" />
+                text="Ajouter utilisateurs"
+                buttonText="Ajouter" />
             <div className="User">
                 <table>
                     <thead>
                     <tr className="header">
-                        <th>Tc Kimlik</th>
+                        <th>ID-NUM</th>
                         <th>E-mail</th>
-                        <th>Password</th>
-                        <th>Phone Number</th>
-                        <th>Adress</th>
-                        <th>Actions</th>
+                        <th>Mot de passe</th>
+                        <th>Telephone</th>
+                        <th>Adresse</th>
+                        <th>Etat</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -71,8 +71,8 @@ class User extends Component {
                 </table>
             </div>
            {this.state.editable ? <EditUser 
-                    text="Edit Selected User"
-                    buttonText="Save"
+                    text="Modifier utilisteur"
+                    buttonText="Enregistrer"
                     userId = {this.state.userId} /> : null}
             </div>
         );
