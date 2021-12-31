@@ -48,20 +48,20 @@ class NewUser extends Component {
                 pattern="[0-9]{11}" 
                 required placeholder="NUM" 
                 value={this.state.tcId} //He
-                onChange={(event) => this.setState({tcId: event.target.value})}/></label>
+                onChange={(event) => this.setState({tcId: event.target.value})}/></label><br></br>
             <label>Email
                 <input type="email"
                  name="email" required 
                  placeholder="email" 
                  value={this.state.email}
-                 onChange={(event) => this.setState({email: event.target.value})}/></label>
+                 onChange={(event) => this.setState({email: event.target.value})}/></label><br></br>
             <label>Telephone
                 <input type="tel" 
                 name="phone" required 
                 placeholder="NUM" 
                 pattern="[0-9]{10}"
                 value={this.state.phone}
-                onChange={(event) => this.setState({phone: event.target.value})}/></label>
+                onChange={(event) => this.setState({phone: event.target.value})}/></label><br></br>
             <label>mot de passe
                 <input type="password" 
                 name="passwordHashed" 
@@ -70,12 +70,12 @@ class NewUser extends Component {
                 onChange={(event) => this.setState({password: event.target.value})}
                 placeholder="create password" 
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                title="Must contain one number and one uppercase and lowercase letter, and at least 8characters"/></label>
+                title="Must contain one number and one uppercase and lowercase letter, and at least 8characters"/></label><br></br>
             <label>Adresse
                 <input type="text" 
                 name="address" required
                 value={this.state.address}
-                onChange={(event) => this.setState({address: event.target.value})}/></label>
+                onChange={(event) => this.setState({address: event.target.value})}/></label><br></br>
             <input className="SaveButton" type="submit" value={this.props.buttonText} onClick={this.addNewUserHandler} />
         </form>
     </div>

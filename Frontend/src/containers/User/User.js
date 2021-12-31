@@ -71,8 +71,8 @@ class User extends Component {
                 </table>
             </div>
            {this.state.editable ? <EditUser 
-                    text="Modifier utilisteur"
-                    buttonText="Enregistrer"
+                    text="Edit Selected User"
+                    buttonText="Save"
                     userId = {this.state.userId} /> : null}
             </div>
         );
