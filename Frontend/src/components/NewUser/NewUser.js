@@ -54,7 +54,7 @@ class NewUser extends Component {
                  name="email" required 
                  placeholder="email" 
                  value={this.state.email}
-                 onChange={(event) => this.setState({email: event.target.value})}/></label>
+                 onChange={(event) => this.setState({email: event.target.value})}/></label><n></n>
             <label>Phone Number
                 <input type="tel" 
                 name="phone" required 
