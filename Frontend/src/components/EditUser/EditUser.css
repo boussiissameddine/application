@@ -6,7 +6,7 @@ h5 {
 .NewUser {
    margin: 4.5rem auto;
    font-size: 1.25rem;
-   background-color: #1a18a5;
+   background-color: #16a085;
    color: #fff;
    display: flex;
    justify-content: center;
@@ -44,7 +44,7 @@ input:focus,
 input:selected {
     user-select: none;
     filter: brightness(90%);
-    border: 1px solid #1a18a5;
+    border: 1px solid #16a085;
 }
 
 input:focus,

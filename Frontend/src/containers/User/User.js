@@ -51,18 +51,18 @@ class User extends Component {
         return (
             <div>
                 <NewUser 
-                text="Ajouter utilisateurs"
-                buttonText="Ajouter" />
+                text="Add New User"
+                buttonText="Add" />
             <div className="User">
                 <table>
                     <thead>
                     <tr className="header">
-                        <th>ID-NUM</th>
+                        <th>Tc Kimlik</th>
                         <th>E-mail</th>
-                        <th>Mot de passe</th>
-                        <th>Telephone</th>
-                        <th>Adresse</th>
-                        <th>Etat</th>
+                        <th>Password</th>
+                        <th>Phone Number</th>
+                        <th>Adress</th>
+                        <th>Actions</th>
                     </tr>
                     </thead>
                     <tbody>

@@ -6,7 +6,7 @@ h5 {
 .NewUser {
    margin: 4.5rem auto;
    font-size: 1.25rem;
-   background-color: #0e0b9c;
+   background-color: #16a085;
    color: #fff;
    display: flex;
    justify-content: center;
@@ -55,7 +55,7 @@ input:focus,
 input:selected {
     user-select: none;
     filter: brightness(90%);
-    border: 1px solid #1411aa;
+    border: 1px solid #16a085;
 }
 
 input:focus,
@@ -67,7 +67,7 @@ textarea:focus,
 }
 
 .SaveButton {
-    background: rgba(20, 18, 133, 0.5);
+    background: rgba(117, 199, 131, 0.5);
     color: #fff;
     margin-top: 1rem;
     padding: 0px 20px; 
@@ -126,7 +126,7 @@ input {
 }
 .SaveButton {
     width: 50%;
-    background: rgba(52, 7, 136, 0.5);
+    background: rgba(117, 199, 131, 0.5);
     color: #fff;
     margin: .4rem;
     padding: 2px 2px; 

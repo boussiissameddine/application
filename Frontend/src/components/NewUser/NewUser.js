@@ -42,11 +42,11 @@ class NewUser extends Component {
         <div className="NewUser">
         <h5>{this.props.text}</h5>
         <form className="Form" onSubmit={this.handleSubmit} action="">
-            <label>ID-NUM
+            <label>TC ID
                 <input type="number" 
                 name="tcId" 
                 pattern="[0-9]{11}" 
-                required placeholder="NUM" 
+                required placeholder="11111111111" 
                 value={this.state.tcId} //He
                 onChange={(event) => this.setState({tcId: event.target.value})}/></label>
             <label>Email
@@ -55,14 +55,14 @@ class NewUser extends Component {
                  placeholder="email" 
                  value={this.state.email}
                  onChange={(event) => this.setState({email: event.target.value})}/></label>
-            <label>Telephone
+            <label>Phone Number
                 <input type="tel" 
                 name="phone" required 
-                placeholder="NUM" 
+                placeholder="5555555555" 
                 pattern="[0-9]{10}"
                 value={this.state.phone}
                 onChange={(event) => this.setState({phone: event.target.value})}/></label>
-            <label>mot de passe
+            <label>Password
                 <input type="password" 
                 name="passwordHashed" 
                 minLength="8" required
@@ -71,7 +71,7 @@ class NewUser extends Component {
                 placeholder="create password" 
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                 title="Must contain one number and one uppercase and lowercase letter, and at least 8characters"/></label>
-            <label>Adresse
+            <label>Adress
                 <input type="text" 
                 name="address" required
                 value={this.state.address}
