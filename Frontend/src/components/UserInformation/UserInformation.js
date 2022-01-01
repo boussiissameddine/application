@@ -8,8 +8,8 @@ const UserInformation = ({tcId, email, password, phoneNumber, address, editClick
                 <td>{password}</td>
                 <td>{phoneNumber}</td>
                 <td>{address}</td>
-                <button onClick={editClicked} className="buttonStyle">Edit</button>
-                <button onClick={deleteClicked} className="buttonStyle">Delete</button>
+                <button onClick={editClicked} className="buttonStyle">Ajouter</button>
+                <button onClick={deleteClicked} className="buttonStyle">Supprimer</button>
         </tr>
     );
 

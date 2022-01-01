@@ -52,7 +52,7 @@ class User extends Component {
             <div>
                 <NewUser 
                 text="Add New User"
-                buttonText="Add" />
+                buttonText="Ajouter" />
             <div className="User">
                 <table>
                     <thead>

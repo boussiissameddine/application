@@ -67,7 +67,7 @@ textarea:focus,
 }
 
 .SaveButton {
-    background: rgba(235, 8, 8, 0.959);
+    background: rgba(160,22,34, 0.8);
     color: #fff;
     margin-top: 1rem;
     padding: 0px 20px; 
