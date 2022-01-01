@@ -63,7 +63,7 @@ textarea:focus,
     font-size: 1.2rem;
     height: 3.2vh;
     align-self: flex-end;
-    border: 1px solid  #bbddcc;
+    border: 1px solid  #cf2727;
     border-radius: 2px;
 }
 
@@ -111,7 +111,7 @@ input {
 }
 .SaveButton {
     width: 50%;
-    background: rgba(117, 199, 131, 0.5);
+    background: rgba(211, 13, 30, 0.856);
     color: #fff;
     margin: .4rem;
     padding: 2px 2px; 
