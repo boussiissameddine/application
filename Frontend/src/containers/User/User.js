@@ -57,11 +57,11 @@ class User extends Component {
                 <table>
                     <thead>
                     <tr className="header">
-                        <th>Tc Kimlik</th>
+                        <th>ID</th>
                         <th>E-mail</th>
-                        <th>Password</th>
-                        <th>Phone Number</th>
-                        <th>Adress</th>
+                        <th>Mote de passe</th>
+                        <th>Telephone</th>
+                        <th>Adresse</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
