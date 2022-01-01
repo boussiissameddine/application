@@ -48,7 +48,7 @@ class NewUser extends Component {
                 pattern="[0-9]{11}" 
                 required placeholder="11111111111" 
                 value={this.state.tcId} //He
-                onChange={(event) => this.setState({tcId: event.target.value})}/></label>
+                onChange={(event) => this.setState({tcId: event.target.value})}/></label><br></br>
             <label>Email
                 <input type="email"
                  name="email" required 
