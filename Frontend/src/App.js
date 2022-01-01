@@ -3,7 +3,7 @@ import Users from './components/Users/Users';
 function App() {
   return (
     <div className="App">
-      <h1>User CRUD Operations</h1>
+      <h1>Ajouter Utilisateurs</h1>
       <hr />
       <Users />
     </div>

@@ -69,7 +69,7 @@ class EditUser extends Component {
             <label>Telephone
                 <input type="tel" 
                 name="phone" required 
-                placeholder="5555555555" 
+                placeholder="123456789" 
                 pattern="[0-9]{10}"
                 value={this.state.phone}
                 onChange={(event) => this.setState({phone: event.target.value})}/></label>
@@ -79,7 +79,7 @@ class EditUser extends Component {
                 minLength="8" required
                 value={this.state.password}
                 onChange={(event) => this.setState({password: event.target.value})}
-                placeholder="create password" 
+                placeholder="Mot de passe" 
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                 title="Must contain one number and one uppercase and lowercase letter, and at least 8characters"/></label>
             <label>Adresse
